@@ -21,7 +21,7 @@ def collectItems(items):
 
 		name = item.findAll('a')[0].text.strip()
 		newItem = {"name": name, "originalPrice": originalPrice, "salesPrice": salesPrice, 
-					"discount": str(salesPrice/originalPrice) + "%"}
+					"discount": str((1 - salesPrice/originalPrice) * 100) + "%"}
 
 		lst += [newItem]
 
